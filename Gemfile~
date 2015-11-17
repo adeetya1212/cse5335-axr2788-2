@@ -2,8 +2,8 @@ source 'https://rubygems.org'
 
 
 
-gem 'mongo'
-#gem 'mongo_mapper'
+gem 'mongo', '=2.1'
+gem 'mongo_mapper'
 gem 'fastercsv'
 gem 'pg', '~>0.18.3'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
