@@ -65,7 +65,7 @@ puts "Connected to Mongo DataBase, Inserting data . . . . . "
 
 $j=0
 while $j < 175 do
-	$connection_variable[:mongoearthquakes].insert_one({"zip":zip[$j],"cdi":cdi[$j],"response":response[$j],"hpcdist":hpcdist[$j],"lat":lat[$j],"long":long[$j],"suspect":suspect[$j],"city":city[$j],"state":state[$j],"locid":locid[$j]})
+	$connection_variable[:mongoearthquakes].insert_one({"zip"=>zip[$j],"cdi"=>cdi[$j],"response"=>response[$j],"hpcdist"=>hpcdist[$j],"lat"=>lat[$j],"long"=>long[$j],"suspect"=>suspect[$j],"city"=>city[$j],"state"=>state[$j],"locid"=>locid[$j]})
 	$j+=1
 end
 
