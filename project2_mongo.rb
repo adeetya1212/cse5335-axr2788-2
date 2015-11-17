@@ -55,16 +55,16 @@ end
 #$connection_variable=Mongo::Client.new(:uri=> "mongodb://heroku_bv2wfp7x:bt1uo8ddu73rs5p6b9nvk5tp4u@ds051534.mongolab.com:51534/heroku_bv2wfp7x")
 
 uri='mongodb://heroku_bv2wfp7x:bt1uo8ddu73rs5p6b9nvk5tp4u@ds051534.mongolab.com:51534/heroku_bv2wfp7x'
-$connection_variable=Mongo::Client.new(uri)
+connection_variable=Mongo::Client.new(uri)
 
 
 
-$connection_variable[:mongoearthquakes].drop
+connection_variable[:mongoearthquakes].drop
 puts "Connected to Mongo DataBase, Inserting data . . . . . "
 
 $j=0
 while $j < 175 do
-	$connection_variable[:mongoearthquakes].insert_one({"zip"=>zip[$j],"cdi"=>cdi[$j],"response"=>response[$j],"hpcdist"=>hpcdist[$j],"lat"=>lat[$j],"long"=>long[$j],"suspect"=>suspect[$j],"city"=>city[$j],"state"=>state[$j],"locid"=>locid[$j]})
+	connection_variable[:mongoearthquakes].insert_one({"zip"=>zip[$j],"cdi"=>cdi[$j],"response"=>response[$j],"hpcdist"=>hpcdist[$j],"lat"=>lat[$j],"long"=>long[$j],"suspect"=>suspect[$j],"city"=>city[$j],"state"=>state[$j],"locid"=>locid[$j]})
 	$j+=1
 end
 
@@ -73,7 +73,7 @@ puts "Data Inserted"
 puts "Enter the ZIP code [primary key] to retrieve the details"
 $qzip=gets.chomp
 #$qzip='"'+$qzip+'"'
-result=$connection_variable[:mongoearthquakes].find({"zip"=>$qzip},{"_id"=>0})
+result=connection_variable[:mongoearthquakes].find({"zip"=>$qzip},{"_id"=>0})
 result.each do |tuple|
     puts tuple
 end
@@ -82,7 +82,7 @@ puts "Enter the City value [non primary attribute] to retrieve the details"
 $qcity=gets.chomp
 $qcity=" \""+$qcity+'"'
 #puts $qcity
-result1=$connection_variable[:mongoearthquakes].find({"city"=>$qcity},{"_id"=>0})
+result1=connection_variable[:mongoearthquakes].find({"city"=>$qcity},{"_id"=>0})
 result1.each do |tuple|
 	puts tuple
 end
