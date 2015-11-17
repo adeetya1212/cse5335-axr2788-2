@@ -74,7 +74,7 @@ puts "Data Inserted"
 puts "Enter the ZIP code [primary key] to retrieve the details"
 $qzip=gets.chomp
 #$qzip='"'+$qzip+'"'
-result=$connection_variable[:mongoearthquakes].find({"zip"=>$qzip},{"_id":0})
+result=$connection_variable[:mongoearthquakes].find({"zip"=>$qzip},{"_id"=>0})
 result.each do |tuple|
     puts tuple
 end
@@ -83,7 +83,7 @@ puts "Enter the City value [non primary attribute] to retrieve the details"
 $qcity=gets.chomp
 $qcity=" \""+$qcity+'"'
 #puts $qcity
-result1=$connection_variable[:mongoearthquakes].find({"city"=>$qcity},{"_id":0})
+result1=$connection_variable[:mongoearthquakes].find({"city"=>$qcity},{"_id"=>0})
 result1.each do |tuple|
 	puts tuple
 end
