@@ -50,13 +50,12 @@ while $i < 175 do
 	$i +=1
 end
 	
-#$connection_variable=Mongo::Client.new([ '127.0.0.1:27017' ], :database => 'mongoearthquakes')
-#$connection_variable=Mongo::Client.new(['mongodb://heroku_bv2wfp7x:bt1uo8ddu73rs5p6b9nvk5tp4u@ds051534.mongolab.com:51534/heroku_bv2wfp7x'], :database=> 'mongoearthquakes')
+#$connection_variable=Mongo::Client.new([ 'mongodb://heroku_bv2wfp7x:bt1uo8ddu73rs5p6b9nvk5tp4u@ds051534.mongolab.com:51534/heroku_bv2wfp7x' ], :database => 'mongoearthquakes')
+#$connection_variable=Mongo::Client.new(['mongodb://heroku_bv2wfp7x:bt1uo8ddu73rs5p6b9nvk5tp4u@ds051534.mongolab.com:51534/heroku_bv2wfp7x'])
 #$connection_variable=Mongo::Client.new(:uri=> "mongodb://heroku_bv2wfp7x:bt1uo8ddu73rs5p6b9nvk5tp4u@ds051534.mongolab.com:51534/heroku_bv2wfp7x")
 
-uri= 'mongodb://heroku_bv2wfp7x:bt1uo8ddu73rs5p6b9nvk5tp4u@ds051534.mongolab.com:51534/heroku_bv2wfp7x'
-
-$connection_variable=Mongo::Client.new(uri)
+uri='mongodb://heroku_bv2wfp7x:bt1uo8ddu73rs5p6b9nvk5tp4u@ds051534.mongolab.com:51534/heroku_bv2wfp7x'
+$connection_variable=>Mongo::Client.new(uri)
 
 
 
