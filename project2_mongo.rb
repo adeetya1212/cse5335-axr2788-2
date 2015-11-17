@@ -55,7 +55,7 @@ end
 #$connection_variable=Mongo::Client.new(:uri=> "mongodb://heroku_bv2wfp7x:bt1uo8ddu73rs5p6b9nvk5tp4u@ds051534.mongolab.com:51534/heroku_bv2wfp7x")
 
 uri='mongodb://heroku_bv2wfp7x:bt1uo8ddu73rs5p6b9nvk5tp4u@ds051534.mongolab.com:51534/heroku_bv2wfp7x'
-$connection_variable=>Mongo::Client.new(uri)
+$connection_variable=Mongo::Client.new(uri)
 
 
 
